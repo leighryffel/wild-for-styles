@@ -8,4 +8,10 @@ class SongsController < ApplicationController
   def show
     render json: Song.find_by(id: params[:id]), status: :ok
   end
+
+  # READ /hottest_song
+  def hottest_song
+    render json: Song.hottest_song, status: :ok
+  end
+
 end

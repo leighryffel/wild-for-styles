@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :albums, only: [:index, :show]
   resources :songs, only: [:index, :show]
   resources :comments, only: [:index, :show, :create, :update, :destroy]
+
+  get '/hottest_song', to: 'songs#hottest_song'
 end

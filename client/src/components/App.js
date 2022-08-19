@@ -1,25 +1,19 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import NavBar from "./NavBar";
+import Ticker from "./Ticker";
+import AlbumList from "./AlbumList";
+import FunBar from "./FunBar";
+import Footer from "./Footer";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [change, setChange] = useState(false);
+  const [albums, setAlbums] = useState([]);
 
   useEffect(() => {
     fetch("/albums")
       .then((r) => r.json())
-      .then((data) => console.log(data));
-  }, []);
-
-  useEffect(() => {
-    fetch("/comments")
-      .then((r) => r.json())
-      .then((data) => console.log(data));
-  }, []);
-
-  useEffect(() => {
-    fetch("/songs")
-      .then((r) => r.json())
-      .then((data) => console.log(data));
+      .then((data) => setAlbums(data));
   }, []);
 
   return (
@@ -27,14 +21,24 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/testing">
-            <header className="App-header">
-              <p>
-                Edit <code>src/App.js</code> and save to reload.
-              </p>
-            </header>
+            <div className="allApp">
+              <div>
+                <NavBar />
+                <Ticker change={change} />
+                <AlbumList
+                  albums={albums}
+                  change={change}
+                  setChange={setChange}
+                />
+              </div>
+              <div>
+                <FunBar />
+                <Footer />
+              </div>
+            </div>
           </Route>
           <Route path="/">
-            <h1>Page Count: {count}</h1>
+            <h1>Page Count: Test</h1>
           </Route>
         </Switch>
       </div>

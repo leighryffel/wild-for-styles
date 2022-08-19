@@ -7,9 +7,21 @@ function App() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    fetch("/hello")
+    fetch("/albums")
       .then((r) => r.json())
-      .then((data) => setCount(data.count));
+      .then((data) => console.log(data));
+  }, []);
+
+  useEffect(() => {
+    fetch("/comments")
+      .then((r) => r.json())
+      .then((data) => console.log(data));
+  }, []);
+
+  useEffect(() => {
+    fetch("/songs")
+      .then((r) => r.json())
+      .then((data) => console.log(data));
   }, []);
 
   return (

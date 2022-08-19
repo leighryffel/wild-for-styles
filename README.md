@@ -1,24 +1,31 @@
-# README
+# 🎵 Wild for Styles 🎵
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a fansite for pop idol Harry Styles. Current features include an album/song browser, a comment section, and a review carousel.
 
-Things you may want to cover:
+Currently working on...
 
-* Ruby version
+* Authentication/authorization
 
-* System dependencies
+* Routes to Merch, Youtube, and Tickets
 
-* Configuration
+## Instructions for Testing/Updating Production
 
-* Database creation
+Start the server:
 
-* Database initialization
+```console
+rails s
+```
 
-* How to run the test suite
+Start the localhost React client:
 
-* Services (job queues, cache servers, search engines, etc.)
+```console
+npm start --prefix client
+```
 
-* Deployment instructions
+Push to GitHub and Heroku:
 
-* ...
+```console
+git add .
+git commit -m 'message'
+git push origin main
+```

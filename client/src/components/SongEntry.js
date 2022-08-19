@@ -1,5 +1,5 @@
 import React from "react";
-import { ListGroup, Badge, Button } from "react-bootstrap";
+import { Badge, Button } from "react-bootstrap";
 
 function SongEntry({ song, change, setChange }) {
   const { title, length, id, likes } = song;
@@ -20,14 +20,14 @@ function SongEntry({ song, change, setChange }) {
   }
 
   return (
-    <ListGroup.Item as="li">
+    <div>
       <strong>{title}</strong> {Math.floor(length / 60)}m {length % 60}s{"  "}
       <Badge bg="success">{likes}</Badge>
       {"  "}
       <Button variant="outline-success" onClick={handleLikeClick}>
         💕
       </Button>
-    </ListGroup.Item>
+    </div>
   );
 }
 

@@ -18,18 +18,30 @@ function NavBar() {
         <ButtonGroup>
           <button className="leighButton">
             {" "}
-            <a target="_blank" href="https://www.hstyles.co.uk/">
+            <a
+              target="_blank"
+              href="https://www.hstyles.co.uk/"
+              rel="noopener noreferrer"
+            >
               BUY TICKETS{" "}
             </a>
           </button>
           <button className="leighButton">
             {" "}
-            <a target="_blank" href="https://shopus.hstyles.co.uk/">
+            <a
+              target="_blank"
+              href="https://shopus.hstyles.co.uk/"
+              rel="noopener noreferrer"
+            >
               BUY MERCH
             </a>
           </button>
           <button className="leighButton">
-            <a target="_blank" href="https://hstyles.lnk.to/youtube">
+            <a
+              target="_blank"
+              href="https://hstyles.lnk.to/youtube"
+              rel="noopener noreferrer"
+            >
               CONCERT FOOTAGE
             </a>
           </button>

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     constraints: ->(req) { !req.xhr? && req.format.html? }
 
   resources :albums, only: [:index, :show]
-  resources :songs, only: [:index, :show]
+  resources :songs, only: [:index, :show, :update]
   resources :comments, only: [:index, :show, :create, :update, :destroy]
 
   get '/hottest_song', to: 'songs#hottest_song'

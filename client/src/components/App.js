@@ -14,7 +14,7 @@ function App() {
     fetch("/albums")
       .then((r) => r.json())
       .then((data) => setAlbums(data));
-  }, []);
+  }, [change]);
 
   return (
     <BrowserRouter>

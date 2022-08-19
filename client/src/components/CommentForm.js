@@ -14,7 +14,7 @@ function CommentForm({ album_id, change, setChange }) {
         comment: comment,
         album_id: album_id,
       }),
-    }).then(() => setChange(!change));
+    }).then(setChange(!change));
     setComment("");
   }
 

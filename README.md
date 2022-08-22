@@ -1,5 +1,7 @@
 # 🎵 Wild for Styles 🎵
 
+## Watch the [Demo Video](https://www.loom.com/share/556b2de35ec14ed5ab940b342283143c)
+
 This is a fansite for pop idol Harry Styles. Current features include an album/song browser, a comment section, and a review carousel.
 
 Currently working on...
